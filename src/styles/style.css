@@ -56,6 +56,7 @@
     --spacing-4: 4px;
     --spacing-8: 8px;
     --spacing-12: 12px;
+    --spacing-15: 15px;
     --spacing-16: 16px;
     --spacing-20: 20px;
     --spacing-30: 30px;
@@ -146,22 +147,35 @@
     }
 
     button {
-
         font-size: var(--font-button);
         line-height: var(--leading-button);
         letter-spacing: var(--tracking-button);
         cursor: pointer;
-        background-color: var(--color-green);
-        color: var(--color-white-100);
-        border: none;
-        padding: var(--spacing-8) var(--spacing-16);
-        border-radius: 4px;
+        background-color: transparent;
+        color: var(--color-green-100);
+        border: 1px solid var(--color-green-100);
+        padding: var(--spacing-15) var(--spacing-20);
+        border-radius: 60px;
         transition: background-color 0.3s ease;
     }
+
     button:hover,
     button:focus {
         background-color: var(--color-green-200);
     }
+
+    button a {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-20);
+        text-decoration: none;
+        line-height: 1;
+    }
+    
+    button a:after {
+        content: url('./button-arrow-icon.svg');
+    }
+
     img {
         width: 100%;
         height: auto;
@@ -269,5 +283,9 @@
     .link-reset {
         text-decoration: none;
         color: inherit;
+    }
+
+    .ml-responsive {
+        margin-left: clamp(0px, calc(210 * ((100vw - 375px) / 865)), 210px);
     }
 }

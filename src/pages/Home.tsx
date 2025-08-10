@@ -1,5 +1,6 @@
 import Nav from '../components/Nav.tsx'
 import HomeHero from '../components/HomeHero.tsx'
+import CTASection from '../components/CTASection.tsx'
 
 export default function Home() {
     return (
@@ -7,6 +8,7 @@ export default function Home() {
             <main id="main" className="container-xxl mx-auto px-[var(--spacing-20)]">
                 <Nav/>
                 <HomeHero/>
+                <CTASection/>
             </main>
         </>
     );
