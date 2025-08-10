@@ -1,6 +1,7 @@
 import Nav from '../components/Nav.tsx'
 import HomeHero from '../components/HomeHero.tsx'
 import CTASection from '../components/CTASection.tsx'
+import ImageGrid from '../components/ImageGrid.tsx'
 
 export default function Home() {
     return (
@@ -9,6 +10,7 @@ export default function Home() {
                 <Nav/>
                 <HomeHero/>
                 <CTASection/>
+                <ImageGrid />
             </main>
         </>
     );
