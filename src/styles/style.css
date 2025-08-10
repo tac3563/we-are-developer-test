@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Colours */
+    --color-green-100: #2E4845;
+    --color-green-200: #253F3C;
+    --color-white-100: #F7FAF6;
+    --color-white-200: #F1F3F0;
+    --color-white-300: #CAD1CE;
+
+    --color-red: #E83644;
+    --color-orange: #FF8C21;
+    --color-green: #00B453;
+
+    /* Typography Font Families: */
+    --font-family: "Open Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Typography Scale (min 375px -> max 1440px viewports): */
+    --font-heading-l: clamp(35px, 2.5vw + 1rem, 50px);
+    --leading-heading-l: clamp(45px, 3vw + 1rem, 60px);
+    --tracking-heading-l: -1px;
+
+    --font-heading-m: clamp(30px, 1.8vw + 0.8rem, 40px);
+    --leading-heading-m: clamp(38px, 2vw + 0.8rem, 47px);
+    --tracking-heading-m: -1px;
+
+    --font-heading-s: clamp(25px, 1.5vw + 0.5rem, 30px);
+    --leading-heading-s: clamp(30px, 1.5vw + 0.6rem, 40px);
+    --tracking-heading-s: -1px;
+
+    --font-heading-xs: clamp(18px, 1.2vw + 0.4rem, 20px);
+    --leading-heading-xs: clamp(26px, 1.2vw + 0.4rem, 40px);
+    --tracking-heading-xs: 0px;
+
+    --font-subheading: 10px;
+    --leading-subheading: 100%;
+    --tracking-subheading: 2px;
+
+    --font-body: 14px;
+    --leading-body: 26px;
+    --tracking-body: 0px;
+
+    --font-body-s: clamp(10px, 2vw + 8px, 12px);
+    --leading-body-s: 16px;
+    --tracking-body-s: 0px;
+
+    --font-button: 12px;
+    --leading-button: 12px;
+    --tracking-button: 0px;
+
+    /* Spacing */
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-30: 30px;
+    --spacing-40: 40px;
+    --spacing-50: 50px;
+    --spacing-68: 68px;
+    --spacing-120: 120px;
+    --spacing-160: 160px;
+}
+
+@layer utilities {
+    .typo-heading-l {
+        font-size: var(--font-heading-l);
+        line-height: var(--leading-heading-l);
+        letter-spacing: var(--tracking-heading-l);
+    }
+
+    .typo-heading-m {
+        font-size: var(--font-heading-m);
+        line-height: var(--leading-heading-m);
+        letter-spacing: var(--tracking-heading-m);
+    }
+
+    .typo-heading-s {
+        font-size: var(--font-heading-s);
+        line-height: var(--leading-heading-s);
+        letter-spacing: var(--tracking-heading-s);
+    }
+
+    .typo-heading-xs {
+        font-size: var(--font-heading-xs);
+        line-height: var(--leading-heading-xs);
+        letter-spacing: var(--tracking-heading-xs);
+    }
+
+    .typo-subheading {
+        font-size: var(--font-subheading);
+        line-height: var(--leading-subheading);
+        letter-spacing: var(--tracking-subheading);
+    }
+
+    .typo-body {
+        font-size: var(--font-body);
+        line-height: var(--leading-body);
+        letter-spacing: var(--tracking-body);
+    }
+
+    .typo-body-s {
+        font-size: var(--font-body-s);
+        line-height: var(--leading-body-s);
+        letter-spacing: var(--tracking-body-s);
+    }
+
+    .typo-button {
+        font-size: var(--font-button);
+        line-height: var(--leading-button);
+        letter-spacing: var(--tracking-button);
+    }
+}
