@@ -54,6 +54,7 @@
 
     /* Spacing */
     --spacing-4: 4px;
+    --spacing-6: 6px;
     --spacing-8: 8px;
     --spacing-12: 12px;
     --spacing-15: 15px;
@@ -62,6 +63,7 @@
     --spacing-30: 30px;
     --spacing-40: 40px;
     --spacing-50: 50px;
+    --spacing-60: 60px;
     --spacing-68: 68px;
     --spacing-100: 100px;
     --spacing-120: 120px;
@@ -331,5 +333,10 @@
         .image-grid li {
             flex-basis: 100%;
         }
+    }
+    
+    .framework-footer-logo {
+        width: 73px;
+        height: auto;
     }
 }

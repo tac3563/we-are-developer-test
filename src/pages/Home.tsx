@@ -3,6 +3,7 @@ import HomeHero from '../components/HomeHero.tsx';
 import CTASection from '../components/CTASection.tsx';
 import ImageGrid from '../components/ImageGrid.tsx';
 import Accordion from '../components/Accordion/Accordion';
+import Footer from '../components/Footer.tsx';
 
 export default function Home() {
 
@@ -14,6 +15,7 @@ export default function Home() {
                 <CTASection />
                 <ImageGrid />
                 <Accordion />
+                <Footer />
             </main>
         </>
     );
