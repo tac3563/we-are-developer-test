@@ -62,12 +62,16 @@
     --spacing-40: 40px;
     --spacing-50: 50px;
     --spacing-68: 68px;
+    --spacing-100: 100px;
     --spacing-120: 120px;
     --spacing-160: 160px;
 
     /* Containers: */
-    --max-width-default: 1240px;
-    --max-width-wide-image: 1320px;
+    --max-width-sm: 610px;
+    --max-width-md: 820px;
+    --max-width-lg: 1030px;
+    --max-width-xl: 1240px;
+    --max-width-xxl: 1340px;
 }
 
 @layer base {
@@ -158,6 +162,10 @@
     button:focus {
         background-color: var(--color-green-200);
     }
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @layer utilities {
@@ -210,16 +218,50 @@
         letter-spacing: var(--tracking-button);
     }
 
+    .font-light {
+        font-weight: 300;
+    }
+
+    .font-regular {
+        font-weight: 400;
+    }
+
+    .font-medium {
+        font-weight: 500;
+    }
+
+    .font-bold {
+        font-weight: 700;
+    }
+
     /* Containers: */
-    .container-default {
-        max-width: var(--max-width-default);
-        margin-left: auto;
+    .container-sm {
+        max-width: var(--max-width-sm);
+        margin-left: 0;
         margin-right: auto;
     }
 
-    .container-wide-image {
-        max-width: var(--max-width-wide-image);
+    .container-md {
+        max-width: var(--max-width-md);
         margin-left: 0;
+        margin-right: auto;
+    }
+
+    .container-lg {
+        max-width: var(--max-width-lg);
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .container-xl {
+        max-width: var(--max-width-xl);
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .container-xxl {
+        max-width: var(--max-width-xxl);
+        margin-left: auto;
         margin-right: auto;
     }
 
