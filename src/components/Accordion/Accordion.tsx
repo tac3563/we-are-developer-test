@@ -14,7 +14,7 @@ export default function Accordion() {
             <section className="container-lg md:my-[var(--spacing-160)] my-[var(--spacing-60)] mx-auto">
                 <div className="text-container mb-[var(--spacing-40)] md:mb-[var(--spacing-50)]">
                     <h2 className="container-md md:my-[var(--spacing-20)] my-[var(--spacing-15)]">Heading text here...</h2>
-                    <p className="text-narrow">Lorem ipsum dolor sit amet consectetur. Malesuada sit consequat tristique
+                    <p className="text-narrow mb-[var(--spacing-10)]">Lorem ipsum dolor sit amet consectetur. Malesuada sit consequat tristique
                         consectetur sit
                         tristique amet in. Etiam egestas elit vestibulum commodo.</p>
                 </div>

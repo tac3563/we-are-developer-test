@@ -7,10 +7,18 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
     }
 
     useEffect(() => {
+        const mainElement = document.getElementById('main');
+
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
+            if (mainElement) {
+                mainElement.style.overflow = 'hidden';
+            }
         } else {
             document.body.style.overflow = '';
+            if (mainElement) {
+                mainElement.style.overflow = '';
+            }
         }
     }, [isMenuOpen]);
 
@@ -62,13 +70,13 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
-                        initial={{ x: '100%' }}
-                        animate={{ x: 0 }}
-                        exit={{ x: '100%' }}
-                        transition={{ type: 'tween', duration: 0.3 }}
-                        className="fixed top-left w-full h-full bg-[var(--color-green-200)] text-white flex flex-col justify-center items-center z-0"
+                        initial={{x: '100%'}}
+                        animate={{x: 0}}
+                        exit={{x: '100%'}}
+                        transition={{type: 'tween', duration: 0.3}}
+                        className="fixed top-left w-full h-screen bg-[var(--color-green-200)] text-white flex flex-col justify-center items-center z-0"
                     >
-                        <ul className="nav-menu-links text-[var(--color-white-100)] absolute left-[var(--spacing-6)] top-[var(--spacing-130)] font-light list-none flex flex-col gap-[var(--spacing-30)] typo-heading-m">
+                        <ul className="nav-menu-links text-[var(--color-white-100)] absolute left-[var(--spacing-6)] top-[var(--spacing-130)] font-light list-none flex flex-col gap-[var(--spacing-30)] typo-heading-m pl-[var(--spacing-16)]">
                             <li>
                                 <a className="link-reset" href="#">
                                     Nav button 01
@@ -84,6 +92,11 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
                                     Nav button 03
                                 </a>
                             </li>
+                        </ul>
+
+                        <ul className="nav-menu-links text-[var(--color-white-300)] absolute left-[var(--spacing-20)] bottom-[var(--spacing-40)] font-light list-none flex flex-col gap-[var(--spacing-10)] typo-body">
+                            <li><a className="link-reset" href="#">Privacy</a></li>
+                            <li><a className="link-reset" href="#">Terms & Conditions</a></li>
                         </ul>
                     </motion.div>
                 )}
