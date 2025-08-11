@@ -1,7 +1,15 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import type {ReactNode} from "react";
 
-export default function AccordionItem({ id, isOpen, onToggle, title, children }) {
-    return (
+interface AccordionItemProps {
+    id: string;
+    isOpen: boolean;
+    onToggle: () => void;
+    title: ReactNode;
+    children: ReactNode;
+}
+
+export default function AccordionItem({ id, isOpen, onToggle, title, children }: AccordionItemProps) {    return (
         <div className="flex flex-col cursor-pointer">
             <div
                 aria-expanded={isOpen}

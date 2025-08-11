@@ -1,7 +1,12 @@
 import {useEffect} from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
+interface MobileMenuProps {
+    isMenuOpen: boolean;
+    setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function MobileMenu({ isMenuOpen, setIsMenuOpen }: MobileMenuProps) {
     function handleHamburgerClick() {
         setIsMenuOpen(prev => !prev);
     }

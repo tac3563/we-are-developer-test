@@ -1,11 +1,16 @@
 import {useState} from "react";
 import AccordionItem from './AccordionItem';
-import accordionData from "../../data/accordionData.ts";
+import accordionData from "../../data/accordionData";
+
+type AccordionDataItem = {
+    title: string;
+    content: string;
+};
 
 export default function Accordion() {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    const toggleIndex = (index) => {
+    const toggleIndex = (index: number) => {
         setOpenIndex(current => (current === index ? null : index));
     };
 
@@ -21,7 +26,7 @@ export default function Accordion() {
 
 
                 <div className="max-w-[var(--max-width-lg)] mx-auto">
-                    {accordionData.map(({title, content}, index) => (
+                    {(accordionData as AccordionDataItem[]).map(({ title, content }, index) => (
                         <AccordionItem
                             key={index}
                             id={`accordion-item-${index}`}
