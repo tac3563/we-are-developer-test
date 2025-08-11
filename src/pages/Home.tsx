@@ -1,4 +1,4 @@
-import Nav from '../components/Nav.tsx';
+import Nav from '../components/Nav/Nav.tsx';
 import HomeHero from '../components/HomeHero.tsx';
 import CTASection from '../components/CTASection.tsx';
 import ImageGrid from '../components/ImageGrid.tsx';

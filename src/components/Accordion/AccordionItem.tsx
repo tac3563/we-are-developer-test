@@ -2,18 +2,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AccordionItem({ id, isOpen, onToggle, title, children }) {
     return (
-        <div className="">
-            <button
+        <div className="flex flex-col cursor-pointer">
+            <div
                 aria-expanded={isOpen}
                 aria-controls={`${id}-content`}
                 id={`${id}-header`}
                 onClick={onToggle}
-                className=" w-full text-left py-[var(--spacing-15)] px-[var(--spacing-20)] flex justify-between items-center border-0 border-b border-[var(--color-white-300)] bg-transparent"
+                className=" w-full text-left flex justify-between items-center border-0 border-b border-[var(--color-white-300)] bg-transparent"
             >
-                <span className="typo-heading-xs font-regular">{title}</span>
+                <div className="w-full typo-heading-xs font-regular flex">{title}</div>
 
                 {isOpen ? (
                     <svg
+                        className="mt-[var(--spacing-30)] mb-[var(--spacing-8)]"
                         width="22"
                         height="1"
                         viewBox="0 0 22 1"
@@ -25,6 +26,7 @@ export default function AccordionItem({ id, isOpen, onToggle, title, children })
                     </svg>
                 ) : (
                     <svg
+                        className="mt-[var(--spacing-30)] mb-[var(--spacing-15)]"
                         width="22"
                         height="21"
                         viewBox="0 0 22 21"
@@ -36,7 +38,7 @@ export default function AccordionItem({ id, isOpen, onToggle, title, children })
                         <line y1="10.5" x2="21.4521" y2="10.5" stroke="#2E4845" />
                     </svg>
                 )}
-            </button>
+            </div>
 
             <AnimatePresence initial={false}>
                 {isOpen && (
@@ -53,9 +55,9 @@ export default function AccordionItem({ id, isOpen, onToggle, title, children })
                             collapsed: { height: 0, opacity: 0 }
                         }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="overflow-hidden px-[var(--spacing-20)] text-[var(--color-green-100)] typo-body"
+                        className="overflow-hidden text-[var(--color-green-100)] typo-body"
                     >
-                        <div className="py-[var(--spacing-12)]">{children}</div>
+                        <div>{children}</div>
                     </motion.div>
                 )}
             </AnimatePresence>

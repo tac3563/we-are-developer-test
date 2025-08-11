@@ -3,16 +3,16 @@ import frameworkLogo from '/footer-framework-logo.svg';
 export default function Footer() {
     return (
         <>
-            <footer className='border-t border-[var(--color-white-300)] nav-menu container-xl mb-[var(--spacing-100)] pt-[var(--spacing-60)]'>
-                <div className="nav-menu-wrapper flex justify-between pb-[var(--spacing-16)]">
+            <footer className='border-t border-[var(--color-white-300)] nav-menu container-xl mb-[var(--spacing-40)] pt-[var(--spacing-60)]'>
+                <div className="nav-menu-wrapper flex justify-between">
                     <div>
                         <div className="nav-logo"><a className='uppercase link-reset typo-body font-bold' href="#">Cottage
                             Retreat</a></div>
                         <div className="mt-[var(--spacing-120)]">
                             <p className="mb-[var(--spacing-6)]">Company name © 2023. All rights Reserved.</p>
                             <div className="flex gap-[var(--spacing-6)]">
-                                <p>Design by</p>
-                                <img className="framework-footer-logo mb-[var(--spacing-12)]" width="73" src={frameworkLogo}
+                                <p className="mb-[var(--spacing-20)]">Design by</p>
+                                <img className="framework-footer-logo mb-[var(--spacing-20)]" width="73" src={frameworkLogo}
                                      alt=""/>
                             </div>
                         </div>

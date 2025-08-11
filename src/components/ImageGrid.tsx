@@ -12,7 +12,7 @@ export default function ImageGrid() {
 
     return (
         <>
-             <section className="container-xl my-[var(--spacing-160)]">
+             <section className="container-xl md:my-[var(--spacing-160)] my-[var(--spacing-80)]">
                  <ul className="image-grid">
                      {
                          images.map((image, index) => (
